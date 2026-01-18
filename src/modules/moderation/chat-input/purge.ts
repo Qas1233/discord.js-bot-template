@@ -217,7 +217,7 @@ const PurgeCommand = new Command({
     ];
 
     const confirmString =
-      `Moderator: ${interaction.user.tag} (${interaction.user.id})\nTotal Messages: ${matched}\n\n` +
+      `Moderator: ${interaction.user.globalName} (${interaction.user.id})\nTotal Messages: ${matched}\n\n` +
       queryFields.map((field) => `${field.name}: ${field.value}`).join('\n') +
       '\n\n' +
       messageLists
