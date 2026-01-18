@@ -68,7 +68,7 @@ const main = async (
     client.login(appConfig.client.token, {
       guildId: commandDeploymentEnvironment,
       clearOtherEnvironment: process.env['NODE_ENV'] !== 'production',
-      forceSync: false,
+      forceSync: process.env['NODE_ENV'] !== 'production',
       ...logInOptions,
     }),
   ]);
